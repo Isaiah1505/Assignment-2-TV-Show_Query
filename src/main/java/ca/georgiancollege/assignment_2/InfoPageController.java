@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,7 +18,29 @@ public class InfoPageController {
     private Button backToSearch;
 
     @FXML
+    private Label endDate;
+
+    @FXML
+    private Label genre;
+
+    @FXML
     private Label infoPageTitle;
+
+    @FXML
+    private Label rating;
+
+    @FXML
+    private ImageView showImage;
+
+    @FXML
+    private Label startDate;
+
+    @FXML
+    private Label summary;
+
+    @FXML
+    private Label url;
+
 
     private Stage stage;
     private Scene scene;
