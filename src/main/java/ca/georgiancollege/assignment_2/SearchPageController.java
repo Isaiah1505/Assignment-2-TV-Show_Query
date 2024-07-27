@@ -12,9 +12,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import javax.net.ssl.HttpsURLConnection;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 
 
 public class SearchPageController {
@@ -43,13 +49,39 @@ public class SearchPageController {
         // Test Code for ListView and numOfResults label
         showList.getItems().addAll(foodList);
         numOfResults.setText(String.valueOf(showList.getItems().size()));
-
-
     }
 
     public void searchTVShow(ActionEvent event){
-        String userSearch = searchBar.getText();
+        String userSearch = (searchBar.getText()).replaceAll(" ","+");
+        System.out.println(userSearch);
+        try {
+            // add userSearch to end of URL soon
+            URL url = new URL("https://api.tvmaze.com/search/shows?q=girls");
+            HttpsURLConnection apiConnection = (HttpsURLConnection) url.openConnection();
+            apiConnection.setRequestMethod("GET");
+            apiConnection.connect();
 
+            if(apiConnection.getResponseCode() != 200){
+                System.out.println(apiConnection.getResponseCode());
+            }else if(apiConnection.getResponseCode() == 200){
+                System.out.println("Connection Made.");
+            }
+            BufferedReader showInfoReader = new BufferedReader(new InputStreamReader(apiConnection.getInputStream()));
+            String showInfo = showInfoReader.readLine();
+            System.out.println(showInfo);
+
+            JSONParser showNameParser = new JSONParser();
+            Object rawShowInfo = showNameParser.parse(showInfo);
+            JSONObject parsedShowInfo = (JSONObject) rawShowInfo;
+
+            String showNames =  String.valueOf(parsedShowInfo.get("name"));
+            //System.out.println(showNames);
+
+            showInfoReader.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
         // After results from search are found
         numOfResults.setText(String.valueOf(showList.getItems().size()));
     }
