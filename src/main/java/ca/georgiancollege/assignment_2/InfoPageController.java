@@ -39,7 +39,7 @@ public class InfoPageController {
     private Label summary;
 
     @FXML
-    private Label url;
+    private Label urlField;
 
 
     private Stage stage;

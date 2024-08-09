@@ -20,6 +20,6 @@
       <Label layoutX="64.0" layoutY="378.0" prefHeight="17.0" prefWidth="81.0" text="Results Found: " textFill="#b50000" />
       <Label fx:id="numOfResults" layoutX="145.0" layoutY="378.0" />
       <Button fx:id="goToShow" layoutX="391.0" layoutY="90.0" mnemonicParsing="false" onAction="#switchToInfoPage" prefHeight="25.0" prefWidth="87.0" text="Go To Show" />
-      <Label alignment="TOP_LEFT" layoutX="493.0" layoutY="140.0" prefHeight="122.0" prefWidth="95.0" text="Enter desired show and Click &quot;Search&quot;, then select a show and click &quot;Go To Show&quot;" textFill="#bf2600" wrapText="true" />
+      <Label fx:id="AppDescription" alignment="TOP_LEFT" layoutX="493.0" layoutY="140.0" prefHeight="122.0" prefWidth="95.0" text="Enter desired show and Click &quot;Search&quot;, then select a show and click &quot;Go To Show&quot;" textFill="#bf2600" wrapText="true" />
    </children>
 </AnchorPane>

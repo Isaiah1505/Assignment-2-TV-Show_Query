@@ -54,7 +54,7 @@
       <Label fx:id="startDate" alignment="TOP_LEFT" layoutX="97.0" layoutY="142.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
       <Label fx:id="endDate" alignment="TOP_LEFT" layoutX="97.0" layoutY="174.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
       <Label fx:id="rating" alignment="TOP_LEFT" layoutX="97.0" layoutY="212.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
-      <Label fx:id="url" alignment="TOP_LEFT" layoutX="97.0" layoutY="246.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
+      <Label fx:id="urlField" alignment="TOP_LEFT" layoutX="97.0" layoutY="246.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
       <Label fx:id="summary" alignment="TOP_LEFT" layoutX="97.0" layoutY="282.0" prefHeight="67.0" prefWidth="216.0" text="Null" />
    </children>
 </AnchorPane>
