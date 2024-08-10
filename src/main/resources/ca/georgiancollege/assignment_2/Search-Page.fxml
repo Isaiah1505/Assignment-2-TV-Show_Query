@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.assignment_2.SearchPageController">
+<AnchorPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../CSS/SearchStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.assignment_2.SearchPageController">
    <children>
-      <Label alignment="CENTER" layoutX="229.0" layoutY="33.0" prefHeight="42.0" prefWidth="143.0" text="TV Show DB" textFill="#bf2600">
+      <Label fx:id="Title" alignment="CENTER" layoutX="229.0" layoutY="33.0" prefHeight="42.0" prefWidth="143.0" text="TV Show DB" textFill="#bf2600">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -17,9 +17,9 @@
       <ListView fx:id="showList" layoutX="64.0" layoutY="140.0" prefHeight="231.0" prefWidth="414.0" />
       <TextField fx:id="searchBar" layoutX="64.0" layoutY="90.0" prefHeight="25.0" prefWidth="207.0" promptText="Title Of Show" />
       <Button fx:id="searchButton" layoutX="285.0" layoutY="90.0" mnemonicParsing="false" onAction="#searchTVShow" prefHeight="25.0" prefWidth="87.0" text="Search" />
-      <Label layoutX="64.0" layoutY="378.0" prefHeight="17.0" prefWidth="81.0" text="Results Found: " textFill="#b50000" />
-      <Label fx:id="numOfResults" layoutX="145.0" layoutY="378.0" />
+      <Label fx:id="results" layoutX="64.0" layoutY="375.0" prefHeight="21.0" prefWidth="87.0" text="Results Found: " textFill="#b50000" />
+      <Label fx:id="numOfResults" layoutX="151.0" layoutY="378.0" prefHeight="17.0" prefWidth="52.0" />
       <Button fx:id="goToShow" layoutX="391.0" layoutY="90.0" mnemonicParsing="false" onAction="#switchToInfoPage" prefHeight="25.0" prefWidth="87.0" text="Go To Show" />
-      <Label fx:id="AppDescription" alignment="TOP_LEFT" layoutX="493.0" layoutY="140.0" prefHeight="122.0" prefWidth="95.0" text="Enter desired show and Click &quot;Search&quot;, then select a show and click &quot;Go To Show&quot;" textFill="#bf2600" wrapText="true" />
+      <Label fx:id="AppDescription" alignment="TOP_LEFT" layoutX="488.0" layoutY="140.0" prefHeight="122.0" prefWidth="100.0" text="Enter desired show and Click &quot;Search&quot;, then select a show and click &quot;Go To Show&quot;" textFill="#bf2600" wrapText="true" />
    </children>
 </AnchorPane>

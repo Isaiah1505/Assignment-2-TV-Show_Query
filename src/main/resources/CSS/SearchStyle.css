@@ -1,0 +1,65 @@
+
+
+#body, #body2{
+-fx-background-color: rgba(65, 199, 255, 0.5);
+}
+
+#showList, #showImage{
+    -fx-background-color: rgb(176, 255, 241);
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(0,0,0);
+}
+
+#Title, #infoPageTitle{
+    -fx-background-color: rgb(236, 236, 236);
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-border-color: rgba(1, 19, 55, 0.5);
+
+}
+
+#AppDescription, #results, #lEnd,#lGenre,#lstart,#lSummary,#lUrl,#lRating{
+    -fx-background-color: rgb(236, 236, 236);
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-border-color: rgba(1, 19, 55, 0.5);
+
+
+}
+
+#searchBar{
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    fx-opacity: 0.7;
+}
+
+ #searchButton, #goToShow, #backToSearch{
+     -fx-text-fill: rgb(255,255,255);
+     -fx-background-color: rgba(255, 0, 0, 0.8);
+     -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+     -fx-border-color: rgb(255, 125, 125);
+}
+
+#searchButton:hover, #goToShow:hover, #backToSearch:hover {
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-background-color: rgba(255, 0, 0, 0.65);
+
+
+}
+#searchButton:pressed, #goToShow:pressed, #backToSearch:pressed {
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-background-color: rgba(255, 0, 0, 0.55);
+
+
+}

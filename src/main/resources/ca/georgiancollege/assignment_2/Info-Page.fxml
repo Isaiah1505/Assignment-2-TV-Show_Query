@@ -1,60 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.assignment_2.InfoPageController">
+<AnchorPane fx:id="body2" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../CSS/SearchStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.assignment_2.InfoPageController">
    <children>
-      <Button fx:id="backToSearch" layoutX="500.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchToSearchPage" text="Go Back" />
-      <Label fx:id="infoPageTitle" alignment="TOP_CENTER" layoutX="92.0" layoutY="34.0" prefHeight="67.0" prefWidth="266.0" text="[Insert Show]">
+      <Button fx:id="backToSearch" layoutX="500.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchToSearchPage" text="Go Back" />
+      <Label fx:id="infoPageTitle" alignment="TOP_CENTER" layoutX="92.0" layoutY="27.0" prefHeight="60.0" prefWidth="266.0" text="[Insert Show]">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="43.0" layoutY="94.0" prefHeight="19.0" prefWidth="47.0" text="Genres:">
+      <Label fx:id="lGenre" alignment="CENTER" layoutX="33.0" layoutY="95.0" prefHeight="25.0" prefWidth="53.0" text="Genres:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="25.0" layoutY="141.0" prefHeight="19.0" prefWidth="67.0" text="Premiered:">
+      <Label fx:id="lstart" alignment="CENTER" layoutX="18.0" layoutY="141.0" prefHeight="25.0" prefWidth="74.0" text="Premiered:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="36.0" layoutY="174.0" prefHeight="19.0" prefWidth="53.0" text="Finished:">
+      <Label fx:id="lEnd" alignment="CENTER" layoutX="29.0" layoutY="174.0" prefHeight="25.0" prefWidth="60.0" text="Finished:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="36.0" layoutY="212.0" prefHeight="19.0" prefWidth="53.0" text="Rating:">
+      <Label fx:id="lRating" alignment="CENTER" layoutX="23.0" layoutY="212.0" prefHeight="25.0" prefWidth="66.0" text="Rating:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="25.0" layoutY="246.0" prefHeight="19.0" prefWidth="60.0" text="Page URL:">
+      <Label fx:id="lUrl" alignment="CENTER" layoutX="11.0" layoutY="246.0" prefHeight="25.0" prefWidth="74.0" text="Page URL:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <ImageView fx:id="showImage" fitHeight="250.0" fitWidth="200.0" layoutX="360.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../Images/image-not-available.jpg" />
-         </image>
-      </ImageView>
-      <Label alignment="CENTER" layoutX="29.0" layoutY="282.0" prefHeight="19.0" prefWidth="60.0" text="Summary:">
+      <ImageView fx:id="showImage" fitHeight="250.0" fitWidth="200.0" layoutX="366.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lSummary" alignment="CENTER" layoutX="23.0" layoutY="282.0" prefHeight="25.0" prefWidth="66.0" text="Summary:">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="genre" alignment="TOP_LEFT" layoutX="105.0" layoutY="95.0" prefHeight="37.0" prefWidth="128.0" text="Null" />
+      <Label fx:id="genre" alignment="TOP_LEFT" layoutX="97.0" layoutY="96.0" prefHeight="37.0" prefWidth="160.0" text="Null" />
       <Label fx:id="startDate" alignment="TOP_LEFT" layoutX="97.0" layoutY="142.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
       <Label fx:id="endDate" alignment="TOP_LEFT" layoutX="97.0" layoutY="174.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
       <Label fx:id="rating" alignment="TOP_LEFT" layoutX="97.0" layoutY="212.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
-      <Label fx:id="urlField" alignment="TOP_LEFT" layoutX="97.0" layoutY="246.0" prefHeight="19.0" prefWidth="128.0" text="Null" />
-      <Label fx:id="summary" alignment="TOP_LEFT" layoutX="97.0" layoutY="282.0" prefHeight="67.0" prefWidth="216.0" text="Null" />
+      <Label fx:id="summary" alignment="TOP_LEFT" layoutX="97.0" layoutY="284.0" prefHeight="102.0" prefWidth="224.0" text="Null" />
+      <Hyperlink fx:id="urlField" layoutX="92.0" layoutY="244.0" onAction="#toShowSite" prefHeight="23.0" prefWidth="216.0" text="Null" />
    </children>
 </AnchorPane>
