@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -113,9 +114,9 @@ public class SearchPageController {
             String selectedItem = showList.getSelectionModel().getSelectedItem();
             InfoPageController infoPageController = loader.getController();
             infoPageController.initialize(showObjArray, selectedItem);
-
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
+            stage.setTitle("Show Detailed Page");
             stage.setScene(scene);
             stage.show();
             stage.setResizable(false);

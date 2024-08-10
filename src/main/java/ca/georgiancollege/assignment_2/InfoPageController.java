@@ -116,6 +116,7 @@ public class InfoPageController {
         fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Search-Page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load());
+        stage.setTitle("TV Show Search");
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
